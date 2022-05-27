@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
     return Consumer<ThemeNotifier>(
       builder: (context, theme, _) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Lucha Canaria Fantasy",
+        title: "Lucha Canaria Fantasy Admin",
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
