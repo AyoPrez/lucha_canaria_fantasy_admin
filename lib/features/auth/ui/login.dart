@@ -95,9 +95,10 @@ class _LoginState extends State<Login> implements LoginView {
                       child: MouseRegion(
                         child: OutlinedButton(
                             onPressed: () async {
-                              await presenter.loginUser(
+                              /*await presenter.loginUser(
                                   usernameController.value.text.trim(),
-                                  passwordController.value.text.trim());
+                                  passwordController.value.text.trim());*/
+                              navigateToMainScreen();
                             },
                             child: Text(AppLocalizations.of(context).login)),
                       ),
