@@ -8,27 +8,81 @@ class MainDesktopBody extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.green,
       body: Row(
-        children: [
-          sideMenuPanel(),
-          mainContent()
-        ],
+        children: [sideMenuPanel(), mainContent()],
       ),
     );
   }
 
   Widget sideMenuPanel() {
-    return Expanded(
-      child: ListView(
+    return Container(
+      color: Colors.white,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ListTile(title: Text("Últimas actualizaciones", style: TextStyle(backgroundColor: Colors.white)),),
-          ListTile(title: Text("Resultados")),
-          ListTile(title: Text("Equipos")),
-          ListTile(title: Text("Ajustes")),
-          ListTile(title: Text("Menu E")),
-          ListTile(title: Text("Menu F")),
-          ListTile(title: Text("Menu G")),
-          ListTile(title: Text("Menu H")),
-          ListTile(title: Text("Menu I")),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(15.0, 80.0, 15.0, 15.0),
+            child: TextButton(
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text(
+                  "Últimas actualizaciones",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: TextButton(
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text(
+                  "Resultados",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: TextButton(
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text(
+                  "Equipos",
+                  style: TextStyle(
+                      color: Colors.black,
+                    fontSize: 18
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: TextButton(
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text(
+                  "Ajustes",
+                  style: TextStyle(
+                      color: Colors.black,
+                    fontSize: 18
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
@@ -37,8 +91,8 @@ class MainDesktopBody extends StatelessWidget {
   Widget mainContent() {
     return Expanded(
       child: Container(
-        child: Center(child: Text('Content')),
         color: Colors.black26,
+        child: const Center(child: Text('Content')),
       ),
     );
   }
