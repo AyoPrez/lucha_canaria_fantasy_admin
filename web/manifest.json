@@ -1,11 +1,11 @@
 {
-    "name": "lucha_canaria_fantasy_admin",
-    "short_name": "lucha_canaria_fantasy_admin",
+    "name": "lucha_fantasy",
+    "short_name": "lucha_fantasy",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "La parte de la aplicación destinada a introducir los datos con los que jugar",
+    "description": "Juego fantasy y cromos de las ligas de lucha canaria",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
