@@ -24,5 +24,6 @@
   "errorUnknownTitle": "Error desconocido",
   "errorUnknownDescription": "Hubo un error desconocido. Por favor, inténtalo de nuevo",
   "errorWrongEmailFormatTitle": "Formato de correo electrónico erroneo",
-  "errorWrongEmailFormatDescription": "Has introducido una dirección de correo electrónico con un formato incorrecto. El correo electrónico debe tener un '@' y no debe contener espacios"
+  "errorWrongEmailFormatDescription": "Has introducido una dirección de correo electrónico con un formato incorrecto. El correo electrónico debe tener un '@' y no debe contener espacios",
+  "addNewTeam": "Añadir nuevo equipo"
   }
