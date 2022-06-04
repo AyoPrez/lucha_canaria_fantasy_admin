@@ -1,6 +1,8 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
+import 'package:lucha_canaria_fantasy_admin/core/theme_manager.dart';
 import 'package:lucha_canaria_fantasy_admin/features/teams/ui/teams_screen.dart';
+import 'package:provider/provider.dart';
 
 class MainDesktopBody extends StatelessWidget {
   const MainDesktopBody({Key? key}) : super(key: key);
@@ -9,11 +11,13 @@ class MainDesktopBody extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final PageController page = PageController();
-    return Scaffold(
+    return Consumer<ThemeNotifier>(
+        builder: (context, theme, _) => Scaffold(
       body: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [sideMenuPanel(context, page), mainContent(context, page)],
       ),
+    ),
     );
   }
 

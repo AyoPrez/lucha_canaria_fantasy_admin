@@ -25,5 +25,11 @@
   "errorUnknownDescription": "Hubo un error desconocido. Por favor, inténtalo de nuevo",
   "errorWrongEmailFormatTitle": "Formato de correo electrónico erroneo",
   "errorWrongEmailFormatDescription": "Has introducido una dirección de correo electrónico con un formato incorrecto. El correo electrónico debe tener un '@' y no debe contener espacios",
-  "addNewTeam": "Añadir nuevo equipo"
+  "addNewTeam": "Añadir nuevo equipo",
+  "teamName": "Nombre del equipo",
+  "teamYearOfFoundation": "Año de la fundación",
+  "teamLocation": "Localización",
+  "teamLogo": "Escudo del equipo",
+  "errorEmptyFieldsTeamDataTitle": "Campos vacíos",
+  "errorEmptyFieldsTeamDataDescription": "Necesitas completar todos los campos para añadir un nuevo equipo"
   }

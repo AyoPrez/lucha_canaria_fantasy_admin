@@ -1,3 +1,5 @@
+import 'package:file_picker/file_picker.dart';
+import 'package:lucha_canaria_fantasy_admin/core/services/exceptions/empty_fields_exception.dart';
 import 'package:lucha_canaria_fantasy_admin/features/teams/data/model/team.dart';
 import 'package:lucha_canaria_fantasy_admin/features/teams/data/repository/teams_repo.dart';
 import 'package:lucha_canaria_fantasy_admin/features/teams/ui/teams_view.dart';
@@ -6,7 +8,7 @@ abstract class TeamsPresenter {
 
   Future<Team> getTeam(String id);
   Future<List<Team>> getAllTeams();
-  Future<bool> saveNewTeam();
+  Future<bool> saveNewTeam(String name, String foundationYear, String localization, PlatformFile? logo);
   Future<void> updateTeam(String id);
   void setTeamsView(TeamsView teamsView);
 }
@@ -34,9 +36,14 @@ class TeamsPresenterImpl implements TeamsPresenter {
   }
 
   @override
-  Future<bool> saveNewTeam() {
-    // TODO: implement saveNewTeam
-    throw UnimplementedError();
+  Future<bool> saveNewTeam(String name, String foundationYear, String location, PlatformFile? logo) async {
+    if(name.isEmpty || foundationYear.isEmpty || location.isEmpty || logo == null) {
+      teamsView?.displayErrorDialog(EmptyFieldsException());
+    }
+
+    final Team team = Team.newTeam(name, logo, foundationYear, location);
+
+    return repo.saveNewTeam(team);
   }
 
   @override
